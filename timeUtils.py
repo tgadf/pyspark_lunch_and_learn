@@ -169,7 +169,7 @@ def update(start, proc, total):
         print("  Processed {0}/{1}. There are {2} minutes remaining  (R={3} evt/sec)".format(proc, total, remaining, fullrate))
         
 
-def elapsed(start, comment=None, showTime=True):
+def elapsed(start, comment=None, showTime=True, returnTime=False):
     if isinstance(start, tuple):
         try:
             comment=start[1]
@@ -207,3 +207,9 @@ def elapsed(start, comment=None, showTime=True):
         units  = "microseconds"
 
     print("{0} {1}.".format(result, units))
+    
+    if returnTime:
+        if seconds > 0:
+            return seconds
+        else:
+            return round(microseconds/1e6, 3)

@@ -3,7 +3,7 @@ import setuptools
 
 setup(
   name = 'pyspark_lunch_and_learn',
-  py_modules = ['timeUtils'],
+  py_modules = ['timeUtils', 'sparkUtils'],
   version = '0.0.1',
   description = 'General Utility Functions',
   long_description = open('README.md').read(),
@@ -20,5 +20,5 @@ setup(
     'Topic :: Software Development :: Libraries :: Python Modules',
     'Topic :: Utilities'
   ],
-  install_requires = ['numpy>=1.15.1', 'pandas>=0.23.4', 'matplotlib>=2.2.2', 'python-dateutil>=2.7.3', 'seaborn>=0.9.0', 'pyspark', 'bs4>=0.0.1', 'scikit-learn>=0.20.3']
+  install_requires = ['python>=3.7', 'numpy>=1.15.1', 'pandas>=0.23.4', 'matplotlib>=2.2.2', 'python-dateutil>=2.7.3', 'seaborn>=0.9.0', 'pyspark', 'bs4>=0.0.1', 'scikit-learn>=0.20.3', 'findspark']
 )
